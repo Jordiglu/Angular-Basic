@@ -1,0 +1,86 @@
+<!-- Contact -->
+<div id="contact" class="form-1 bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 contact-container">
+                <h2 class="blast-root1" arial-label="Contact me"></h2>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1;">C</span>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1;">o</span>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1;">n</span>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1;">t</span>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1;">a</span>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1;">c</span>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1;">t</span>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1; margin-left: 3%;">m</span>
+                <span class="blast blast-root1" aria-hidden="true" style="opacity: 1;">e</span>
+                <p class="p-heading">For any type of online project please don't hesitate to get in touch with me.
+                    The
+                    fastest way is to send me your message using the following email <a class="blue no-line"
+                        href="#your-link">jordicalatayudcastro@gmail.com</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <!-- Contact Form-->
+        <form id="contactForm" class="flex center" [formGroup]="contactForm" (ngSubmit)="onSubmit()"
+            #localForm="ngForm">
+            <div class="form-row">
+                <div class="col input start">
+                    <input type="text" formControlName="name" class="form-control rounded bg-dark " placeholder="Name"
+                        [class.is-invalid]="localForm.submitted && contactForm.get('name')?.invalid" required>
+                    <div *ngIf="getControl.name.touched && getControl.name.invalid"
+                        class="text-danger invalid-feedback">
+                        <div *ngIf="getControl.name.errors?.required">Name is required.</div>
+                        <div *ngIf="getControl.name.errors?.minlength">Minimum 4 character are required.</div>
+                    </div>
+                </div>
+                <div class="col input">
+                    <input type="email" formControlName="email" class="form-control rounded bg-dark "
+                        placeholder="email"
+                        [class.is-invalid]="localForm.submitted && contactForm.get('email')?.invalid" required>
+                    <div *ngIf="getControl.email.touched && getControl.email.invalid" class="text-danger">
+                        <div *ngIf="getControl.email.errors?.required">Email is required.</div>
+                        <div *ngIf="getControl.email.errors?.email">Email seems invalid.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="subject" class="form-control rounded  bg-dark" placeholder="Subject"
+                    [class.is-invalid]="localForm.submitted && contactForm.get('subject')?.invalid" required>
+                <div *ngIf="getControl.subject.touched && getControl.subject.invalid" class="text-danger">
+                    <div *ngIf="getControl.subject.errors?.required">Name is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea formControlName="projectDetails" class="form-control rounded bg-dark" rows="5" id="cmessage"
+                    placeholder="Project details"
+                    [class.is-invalid]="localForm.submitted && contactForm.get('projectDetails')?.invalid"
+                    required></textarea>
+                <div *ngIf="getControl.projectDetails.touched && getControl.projectDetails.invalid" class="text-danger">
+                    Project details are required.
+                    <!-- <div *ngIf="getControl.projectDetails.errors?.required">Name is required.</div>
+                </div> -->
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="
+                    form-control-submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- end of contact form -->
+
+<!-- </div> end of col -->
+<!-- </div> end of row -->
+<!-- end of container -->
+<!-- end of form-1 -->
+<!-- end of contact -->
+<!-- <form>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name">
+      </div>
+    </div>
+  </form> -->

@@ -1,0 +1,46 @@
+.text-container-h1 {
+    line-height: 0.1rem;
+    font-weight: 700;
+    margin-top: -2rem;
+}
+
+.main-container {}
+
+.tags {
+    color: #515152;
+    position: absolute;
+    left: 2rem;
+    font-style: italic;
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+}
+
+.top-tag {
+    top: 3rem;
+}
+
+.top-tag::after {
+    content: "<body>";
+    /* margin-top: 1rem; */
+    position: absolute;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.tag-h1::before {
+    content: "<h1>";
+    margin-left: -4rem;
+    margin-bottom: 2rem;
+}
+
+.tag-end::after {
+    content: "</h1>";
+    position: absolute;
+    margin-left: 20rem;
+}
+
+@media (max-width: 600px) {
+    .tag-end::after {
+        margin-left: 10rem;
+    }
+}
